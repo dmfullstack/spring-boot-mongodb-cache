@@ -17,15 +17,15 @@ public class DataLoader implements ApplicationRunner {
 
   @Override
   public void run(ApplicationArguments args) throws Exception {
-      final Long cnt = controller.count();
-      if (cnt == 0) {
-          controller.deleteCache();
-          final Book book = new Book();
-          book.setTitle("MongoDbCookBook");
-          book.setText("MongoDB Data Book");
-          book.setAuthor("Raja");
-          controller.saveBook(book);
-      }
+    final Long cnt = controller.count();
+    if (cnt == 0) {
+      controller.deleteCache();
+      final Book book = new Book();
+      book.setTitle("MongoDbCookBook");
+      book.setText("MongoDB Data Book");
+      book.setAuthor("Raja");
+      controller.saveBook(book);
+    }
   }
-  
+
 }
